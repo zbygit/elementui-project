@@ -20,12 +20,13 @@
       <el-table-column prop="address" label="地址" width="380"></el-table-column>
 
       <el-table-column label="头像" width="80">
-        <template slot-scope="scope">
-          <el-image class="imgb" :src="scope.row.thumb"></el-image>
-        </template>
+           <template slot-scope="scope">
+              <img :src="scope.row.thumb" class="imgb" >
+         </template>
+
       </el-table-column>
       <el-table-column label="操作" align="center">
-        <template slot-scope="scope">
+        <template >
           <el-button size="medium" type="primary" icon="el-icon-edit">编辑</el-button>
           <el-button size="medium" type="danger" icon="el-icon-delete">删除</el-button>
         </template>
@@ -37,7 +38,7 @@
 
 
 <script>
-import { table } from "../../api/index";
+import { table } from "../../api/index"
 export default {
   created() {
     this.getTable();

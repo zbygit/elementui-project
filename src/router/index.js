@@ -14,6 +14,11 @@ export default new Router({
       component: index,
       children:[
         {
+          path: '',
+          name: 'chart',
+          component: chart
+        },
+        {
           path: 'chart',
           name: 'chart',
           component: chart
